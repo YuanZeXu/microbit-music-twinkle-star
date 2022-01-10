@@ -1,5 +1,5 @@
 {
-    "name": "演奏小星星",
+    "name": "演奏樂譜猜歌名",
     "description": "",
     "dependencies": {
         "core": "*",
