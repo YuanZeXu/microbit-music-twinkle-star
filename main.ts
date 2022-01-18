@@ -1,5 +1,8 @@
 input.onButtonPressed(Button.A, function () {
-    musicSN += 1
+    if (musicSN < 6) {
+        musicSN += 1
+        basic.showNumber(musicSN)
+    }
 })
 input.onButtonPressed(Button.AB, function () {
     if (musicSN == 1) {
@@ -143,9 +146,8 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     musicSN = 0
+    basic.showNumber(musicSN)
 })
 let musicSN = 0
 musicSN = 0
-basic.forever(function () {
-    basic.showNumber(musicSN)
-})
+basic.showNumber(musicSN)
