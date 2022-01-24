@@ -1,5 +1,5 @@
 input.onButtonPressed(Button.A, function () {
-    if (musicSN < 6) {
+    if (musicSN < 7) {
         musicSN += 1
         basic.showNumber(musicSN)
     }
@@ -11,13 +11,16 @@ input.onButtonPressed(Button.AB, function () {
         music.playTone(262, music.beat(BeatFraction.Whole))
         music.playTone(392, music.beat(BeatFraction.Whole))
         music.playTone(392, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(440, music.beat(BeatFraction.Whole))
         music.playTone(440, music.beat(BeatFraction.Whole))
         music.playTone(392, music.beat(BeatFraction.Double))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(294, music.beat(BeatFraction.Whole))
         music.playTone(294, music.beat(BeatFraction.Whole))
         music.playTone(262, music.beat(BeatFraction.Double))
@@ -27,14 +30,17 @@ input.onButtonPressed(Button.AB, function () {
         music.playTone(392, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(262, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(392, music.beat(BeatFraction.Whole))
         music.playTone(392, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(262, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(294, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
@@ -70,14 +76,17 @@ input.onButtonPressed(Button.AB, function () {
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Double))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Double))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(330, music.beat(BeatFraction.Whole))
         music.playTone(392, music.beat(BeatFraction.Whole))
         music.playTone(262, music.beat(BeatFraction.Whole))
         music.playTone(294, music.beat(BeatFraction.Whole))
         music.playTone(330, music.beat(BeatFraction.Whole))
+        music.rest(music.beat(BeatFraction.Quarter))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
         music.playTone(349, music.beat(BeatFraction.Whole))
@@ -142,6 +151,8 @@ input.onButtonPressed(Button.AB, function () {
             music.playTone(277, music.beat(BeatFraction.Whole))
             music.rest(music.beat(BeatFraction.Whole))
         }
+    } else if (musicSN == 7) {
+        music.startMelody(music.builtInMelody(Melodies.Ode), MelodyOptions.Once)
     }
 })
 input.onButtonPressed(Button.B, function () {
